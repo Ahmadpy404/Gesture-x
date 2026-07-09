@@ -1,0 +1,9 @@
+{
+  "name": "com.gesturex.mouse",
+  "description": "GestureX Virtual Mouse Host",
+  "path": "c:\\Users\\Admin\\Downloads\\222222\\gesture-x\\src\\python_backend\\run_host.bat",
+  "type": "stdio",
+  "allowed_origins": [
+    "chrome-extension://apbmehcmmmghmffmgbkcbihbpndifnab/"
+  ]
+}

@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gesture X — Settings</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="settings.css" />
+</head>
+<body>
+
+  <div class="settings-layout">
+    <!-- Sidebar -->
+    <nav class="sidebar" aria-label="Settings navigation">
+      <div class="sidebar-brand">
+        <div class="sidebar-logo" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+            <path d="M9 11V6a1 1 0 0 1 2 0v5M11 10V5a1 1 0 0 1 2 0v5M13 10V6a1 1 0 0 1 2 0v5M7 13V9a1 1 0 0 1 2 0v4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+            <path d="M7 13c0 3.866 3.134 7 7 7 3.866 0 7-3.134 7-7V9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <span class="sidebar-brand-name">Gesture X</span>
+      </div>
+
+      <ul class="nav-list" role="list">
+        <li>
+          <button class="nav-item active" data-section="general" id="nav-general" aria-current="page" aria-controls="section-general">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="1.8"/>
+              <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z" stroke="currentColor" stroke-width="1.8"/>
+            </svg>
+            General
+          </button>
+        </li>
+        <li>
+          <button class="nav-item" data-section="gestures" id="nav-gestures" aria-controls="section-gestures">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M9 11V6a1 1 0 0 1 2 0v5M11 10V5a1 1 0 0 1 2 0v5M13 10V6a1 1 0 0 1 2 0v5M7 13V9a1 1 0 0 1 2 0v4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+              <path d="M7 13c0 3.866 3.134 7 7 7 3.866 0 7-3.134 7-7V9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+            </svg>
+            Gestures
+          </button>
+        </li>
+        <li>
+          <button class="nav-item" data-section="mouse" id="nav-mouse" aria-controls="section-mouse">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <rect x="5" y="2" width="14" height="20" rx="7" stroke="currentColor" stroke-width="1.8"/>
+              <path d="M12 2v7" stroke="currentColor" stroke-width="1.8"/>
+              <path d="M5 9h14" stroke="currentColor" stroke-width="1.8"/>
+            </svg>
+            Virtual Mouse
+          </button>
+        </li>
+        <li>
+          <button class="nav-item" data-section="voice" id="nav-voice" aria-controls="section-voice">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <rect x="9" y="2" width="6" height="11" rx="3" stroke="currentColor" stroke-width="1.8"/>
+              <path d="M5 10a7 7 0 0 0 14 0M12 19v3M9 22h6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+            </svg>
+            Voice
+          </button>
+        </li>
+        <li>
+          <button class="nav-item" data-section="appearance" id="nav-appearance" aria-controls="section-appearance">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.8"/>
+              <path d="M12 2a10 10 0 0 1 0 20" stroke="currentColor" stroke-width="1.8"/>
+            </svg>
+            Appearance
+          </button>
+        </li>
+        <li>
+          <button class="nav-item" data-section="about" id="nav-about" aria-controls="section-about">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.8"/>
+              <path d="M12 16v-4M12 8h.01" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+            About
+          </button>
+        </li>
+      </ul>
+
+      <div class="sidebar-footer">
+        <button class="danger-btn" id="reset-btn" aria-label="Reset all settings to defaults">
+          Reset Defaults
+        </button>
+      </div>
+    </nav>
+
+    <!-- Main content -->
+    <main class="settings-main" id="settings-main">
+
+      <!-- General -->
+      <section id="section-general" class="settings-section active" aria-labelledby="general-heading">
+        <div class="section-header">
+          <h1 class="section-title" id="general-heading">General</h1>
+          <p class="section-desc">Core Gesture X behaviour and recognition settings.</p>
+        </div>
+
+        <div class="card">
+          <div class="card-row">
+            <div class="card-row-info">
+              <span class="card-row-label">Gesture Recognition</span>
+              <span class="card-row-desc">Use hand gestures to control the browser</span>
+            </div>
+            <label class="toggle-switch" for="s-gesture-toggle">
+              <input type="checkbox" id="s-gesture-toggle" data-setting="enableGesture" role="switch" />
+              <span class="toggle-track"><span class="toggle-thumb"></span></span>
+            </label>
+          </div>
+          <div class="card-divider"></div>
+          <div class="card-row">
+            <div class="card-row-info">
+              <span class="card-row-label">Voice Recognition</span>
+              <span class="card-row-desc">Always-on voice command processing</span>
+            </div>
+            <label class="toggle-switch" for="s-voice-toggle">
+              <input type="checkbox" id="s-voice-toggle" data-setting="enableVoice" role="switch" />
+              <span class="toggle-track"><span class="toggle-thumb"></span></span>
+            </label>
+          </div>
+          <div class="card-divider"></div>
+          <div class="card-row">
+            <div class="card-row-info">
+              <span class="card-row-label">HUD Overlay</span>
+              <span class="card-row-desc">Show recognized commands in a page overlay</span>
+            </div>
+            <label class="toggle-switch" for="s-hud-toggle">
+              <input type="checkbox" id="s-hud-toggle" data-setting="feedbackHUD" role="switch" />
+              <span class="toggle-track"><span class="toggle-thumb"></span></span>
+            </label>
+          </div>
+          <div class="card-divider"></div>
+          <div class="card-row">
+            <div class="card-row-info">
+              <span class="card-row-label">Audio Feedback</span>
+              <span class="card-row-desc">Play a subtle sound on gesture/voice recognition</span>
+            </div>
+            <label class="toggle-switch" for="s-audio-toggle">
+              <input type="checkbox" id="s-audio-toggle" data-setting="feedbackAudio" role="switch" />
+              <span class="toggle-track"><span class="toggle-thumb"></span></span>
+            </label>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="slider-row">
+            <div class="card-row-info">
+              <label class="card-row-label" for="sensitivity-slider">Gesture Sensitivity</label>
+              <span class="card-row-desc">Higher = more responsive but may cause false triggers</span>
+            </div>
+            <div class="slider-value-badge" id="sensitivity-value">70%</div>
+          </div>
+          <input
+            type="range"
+            id="sensitivity-slider"
+            class="range-slider"
+            data-setting="sensitivity"
+            min="10" max="100" step="5" value="70"
+            aria-valuemin="10" aria-valuemax="100"
+            aria-valuenow="70"
+            aria-valuetext="70 percent"
+          />
+
+          <div class="slider-row mt-16">
+            <div class="card-row-info">
+              <label class="card-row-label" for="hold-slider">Hold Duration</label>
+              <span class="card-row-desc">Time to hold a gesture before it's confirmed</span>
+            </div>
+            <div class="slider-value-badge" id="hold-value">300ms</div>
+          </div>
+          <input
+            type="range"
+            id="hold-slider"
+            class="range-slider"
+            data-setting="holdDuration"
+            min="100" max="1000" step="50" value="300"
+            aria-valuemin="100" aria-valuemax="1000"
+            aria-valuenow="300"
+            aria-valuetext="300 milliseconds — Quick"
+          />
+
+          <div class="slider-row mt-16">
+            <div class="card-row-info">
+              <label class="card-row-label" for="cooldown-slider">Gesture Cooldown</label>
+              <span class="card-row-desc">Minimum time between two gesture triggers</span>
+            </div>
+            <div class="slider-value-badge" id="cooldown-value">800ms</div>
+          </div>
+          <input
+            type="range"
+            id="cooldown-slider"
+            class="range-slider"
+            data-setting="gestureCooldown"
+            min="300" max="2000" step="100" value="800"
+            aria-valuemin="300" aria-valuemax="2000"
+            aria-valuenow="800"
+            aria-valuetext="800 milliseconds"
+          />
+        </div>
+      </section>
+
+      <!-- Gestures -->
+      <section id="section-gestures" class="settings-section" aria-labelledby="gestures-heading" hidden>
+        <div class="section-header">
+          <h1 class="section-title" id="gestures-heading">Gesture Bindings</h1>
+          <p class="section-desc">Map each hand gesture to a browser command.</p>
+        </div>
+        <div class="card" id="gesture-bindings-card">
+          <!-- Populated by settings.js -->
+          <p class="card-loading">Loading gesture bindings…</p>
+        </div>
+      </section>
+
+      <!-- Virtual Mouse -->
+      <section id="section-mouse" class="settings-section" aria-labelledby="mouse-heading" hidden>
+        <div class="section-header">
+          <h1 class="section-title" id="mouse-heading">Virtual Mouse Mode</h1>
+          <p class="section-desc">Control the Windows OS mouse cursor using hand tracking.</p>
+        </div>
+
+        <div class="card">
+          <div class="card-row">
+            <div class="card-row-info">
+              <span class="card-row-label">Virtual Mouse Mode</span>
+              <span class="card-row-desc">Enable AI Hand Mouse Control (Requires Native Messaging Host)</span>
+            </div>
+            <label class="toggle-switch" for="s-virtual-mouse-toggle">
+              <input type="checkbox" id="s-virtual-mouse-toggle" data-setting="enableVirtualMouse" role="switch" />
+              <span class="toggle-track"><span class="toggle-thumb"></span></span>
+            </label>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="slider-row">
+            <div class="card-row-info">
+              <label class="card-row-label" for="mouse-speed-slider">Cursor Speed</label>
+              <span class="card-row-desc">Multiplies hand movement mapped to screen</span>
+            </div>
+            <div class="slider-value-badge" id="mouse-speed-value">1.0x</div>
+          </div>
+          <input type="range" id="mouse-speed-slider" class="range-slider" data-setting="virtualMouseSpeed" min="1" max="50" step="1" value="10" />
+
+          <div class="slider-row mt-16">
+            <div class="card-row-info">
+              <label class="card-row-label" for="mouse-smooth-slider">Cursor Smoothing</label>
+              <span class="card-row-desc">Reduces jitter (higher = smoother but more lag)</span>
+            </div>
+            <div class="slider-value-badge" id="mouse-smooth-value">50%</div>
+          </div>
+          <input type="range" id="mouse-smooth-slider" class="range-slider" data-setting="virtualMouseSmoothing" min="0" max="99" step="1" value="50" />
+          
+          <div class="slider-row mt-16">
+            <div class="card-row-info">
+              <label class="card-row-label" for="mouse-scroll-slider">Scroll Speed</label>
+              <span class="card-row-desc">Multiplies the peace gesture scroll rate</span>
+            </div>
+            <div class="slider-value-badge" id="mouse-scroll-value">5.0x</div>
+          </div>
+          <input type="range" id="mouse-scroll-slider" class="range-slider" data-setting="virtualMouseScrollSpeed" min="1" max="100" step="1" value="50" />
+        </div>
+      </section>
+
+      <!-- Voice -->
+      <section id="section-voice" class="settings-section" aria-labelledby="voice-heading" hidden>
+        <div class="section-header">
+          <h1 class="section-title" id="voice-heading">Voice Commands</h1>
+          <p class="section-desc">Built-in phrases recognized by Gesture X.</p>
+        </div>
+        <div class="card" id="voice-commands-card">
+          <p class="card-loading">Loading voice commands…</p>
+        </div>
+      </section>
+
+      <!-- Appearance -->
+      <section id="section-appearance" class="settings-section" aria-labelledby="appearance-heading" hidden>
+        <div class="section-header">
+          <h1 class="section-title" id="appearance-heading">Appearance</h1>
+          <p class="section-desc">Customize the look and feel of Gesture X.</p>
+        </div>
+        <div class="card">
+          <div class="card-row-info mb-12">
+            <span class="card-row-label">Theme</span>
+            <span class="card-row-desc">Choose the popup and HUD color scheme</span>
+          </div>
+          <div class="theme-grid" role="radiogroup" aria-label="Theme selection">
+            <label class="theme-option" for="theme-dark" aria-label="Dark theme">
+              <input type="radio" id="theme-dark" name="theme" value="dark" data-setting="theme" checked />
+              <div class="theme-preview theme-dark-preview" aria-hidden="true"></div>
+              <span>Dark</span>
+            </label>
+            <label class="theme-option" for="theme-light" aria-label="Light theme">
+              <input type="radio" id="theme-light" name="theme" value="light" data-setting="theme" />
+              <div class="theme-preview theme-light-preview" aria-hidden="true"></div>
+              <span>Light</span>
+            </label>
+            <label class="theme-option" for="theme-system" aria-label="System theme">
+              <input type="radio" id="theme-system" name="theme" value="system" data-setting="theme" />
+              <div class="theme-preview theme-system-preview" aria-hidden="true"></div>
+              <span>System</span>
+            </label>
+          </div>
+        </div>
+      </section>
+
+      <!-- About -->
+      <section id="section-about" class="settings-section" aria-labelledby="about-heading" hidden>
+        <div class="section-header">
+          <h1 class="section-title" id="about-heading">About</h1>
+          <p class="section-desc">Gesture X — Hands-free browser control.</p>
+        </div>
+        <div class="stats-row">
+          <div class="stat-tile">
+            <div class="stat-value" id="stat-gestures">10</div>
+            <div class="stat-label">Gestures</div>
+          </div>
+          <div class="stat-tile">
+            <div class="stat-value" id="stat-voice">35</div>
+            <div class="stat-label">Voice Phrases</div>
+          </div>
+          <div class="stat-tile">
+            <div class="stat-value" id="stat-commands">19</div>
+            <div class="stat-label">Commands</div>
+          </div>
+        </div>
+        <div class="card about-card">
+          <div class="about-logo">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M9 11V6a1 1 0 0 1 2 0v5M11 10V5a1 1 0 0 1 2 0v5M13 10V6a1 1 0 0 1 2 0v5M7 13V9a1 1 0 0 1 2 0v4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+              <path d="M7 13c0 3.866 3.134 7 7 7 3.866 0 7-3.134 7-7V9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h2 class="about-name">Gesture X</h2>
+          <p class="about-version" id="about-version">Version 1.0.0</p>
+          <p class="about-desc">
+            Hands-free browser control powered by MediaPipe hand tracking and Web Speech API.
+            Built with Manifest V3 for security and performance.
+          </p>
+          <div class="about-links">
+            <a href="https://github.com/gesture-x" target="_blank" rel="noopener noreferrer" class="about-link">GitHub</a>
+            <a href="#" class="about-link" id="export-config-btn">Export Config</a>
+            <a href="#" class="about-link" id="import-config-btn">Import Config</a>
+          </div>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- Toast notification -->
+  <div class="toast" id="toast" role="status" aria-live="polite" aria-atomic="true"></div>
+
+  <script src="settings.js" type="module"></script>
+</body>
+</html>

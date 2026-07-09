@@ -1,0 +1,28 @@
+{
+  "name": "gesture-x",
+  "version": "1.0.0",
+  "description": "Gesture X — Hands-free browser control via MediaPipe and Web Speech API",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "setup": "npm install && node scripts/copy-mediapipe.cjs",
+    "copy-mediapipe": "node scripts/copy-mediapipe.cjs",
+    "postinstall": "node scripts/copy-mediapipe.cjs",
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js tests/unit",
+    "test:e2e": "node --experimental-vm-modules node_modules/jest/bin/jest.js --testMatch=\"**/tests/e2e/**/*.test.js\"",
+    "test:all": "npm run test && npm run test:e2e",
+    "package": "node scripts/package.cjs"
+  },
+  "dependencies": {
+    "@mediapipe/hands": "^0.4.1675469240",
+    "@mediapipe/tasks-vision": "^0.10.35"
+  },
+  "devDependencies": {
+    "archiver": "^7.0.1",
+    "jest": "^29.0.0",
+    "puppeteer": "^22.0.0"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}

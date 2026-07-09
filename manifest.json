@@ -1,0 +1,93 @@
+{
+  "manifest_version": 3,
+  "name": "Gesture X",
+  "version": "1.0.0",
+  "description": "Hands-free browser control using hand gestures and voice commands. Powered by MediaPipe.",
+  "author": "Gesture X Team",
+
+  "icons": {
+    "16":  "src/assets/icons/icon16.png",
+    "32":  "src/assets/icons/icon32.png",
+    "48":  "src/assets/icons/icon48.png",
+    "128": "src/assets/icons/icon128.png"
+  },
+
+  "action": {
+    "default_popup": "src/popup/popup.html",
+    "default_icon": {
+      "16":  "src/assets/icons/icon16.png",
+      "32":  "src/assets/icons/icon32.png",
+      "48":  "src/assets/icons/icon48.png",
+      "128": "src/assets/icons/icon128.png"
+    },
+    "default_title": "Gesture X — Hands-Free Browser Control"
+  },
+
+  "background": {
+    "service_worker": "src/background/service-worker.js",
+    "type": "module"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["src/content/content.js"],
+      "css": ["src/content/content.css"],
+      "run_at": "document_idle",
+      "all_frames": false,
+      "type": "module"
+    }
+  ],
+
+  "permissions": [
+    "tabs",
+    "history",
+    "bookmarks",
+    "storage",
+    "offscreen",
+    "alarms",
+    "scripting",
+    "notifications",
+    "activeTab",
+    "sessions",
+    "nativeMessaging"
+  ],
+
+  "host_permissions": [
+    "<all_urls>"
+  ],
+
+  "content_security_policy": {
+    "extension_pages": "script-src 'self' 'wasm-unsafe-eval'; object-src 'self'"
+  },
+
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "src/assets/icons/*",
+        "src/assets/sounds/*"
+      ],
+      "matches": ["<all_urls>"]
+    },
+    {
+      "resources": [
+        "src/assets/mediapipe/*"
+      ],
+      "matches": ["<all_urls>"]
+    },
+    {
+      "resources": [
+        "src/popup/*",
+        "src/settings/*"
+      ],
+      "matches": ["<all_urls>"]
+    }
+  ],
+
+  "options_ui": {
+    "page": "src/settings/settings.html",
+    "open_in_tab": true
+  },
+
+  "minimum_chrome_version": "116"
+}

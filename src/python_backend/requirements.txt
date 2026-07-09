@@ -1,0 +1,2 @@
+# No external dependencies required!
+# GestureX Virtual Mouse uses Python's built-in ctypes for ultra-low latency mouse control via Windows API.
